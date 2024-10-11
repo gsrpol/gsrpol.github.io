@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4c6faf;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+#photo1 {
+    display: none; 
+    max-width: 100%; 
+    width: 700px; 
+    height: 400px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+#photo2 {
+    display: none;
+    max-width: 100%;
+    width: 700px; 
+    height: 400px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+#photo3 {
+    display: none;
+    max-width: 100%;
+    width: 700px; 
+    height: 400px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+#photo4 {
+    display: none;
+    max-width: 100%;
+    width: 700px; 
+    height: 400px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+#photo5 {
+    display: none;
+    max-width: 100%;
+    width: 700px; 
+    height: 400px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+li:hover {
+    text-shadow: 2px 2px 10px #000000;
+    filter: drop-shadow (color= #000000, offx=2, offy=2);
+  }
+  
+
+button {
+    margin-top: 0.5rem;
+    padding: 10px 10px 10px 10px;
+    background: #4c6faf;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+button:hover {
+    background: #4d82e5;
+}  
+.yanone-kaffeesatz-cit {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+
+    font-weight: 700;
+    font-size: large;
+    font-style:normal
+  }
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    background: #4c6faf;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   
+.back-to-top:hover {
+    background: #4d82e5;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
