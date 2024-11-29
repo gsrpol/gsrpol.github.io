@@ -1,3 +1,26 @@
+function get_all_resource() { // получаем данные
+
+    fetch('https://official-joke-api.appspot.com/random_joke')
+    .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Ошибка при вызове API');
+        }
+      })
+      .then(data => {
+        alert(data.setup +" "+ data.punchline);
+      })
+      .catch(error => {
+        alert(error);
+      });
+}
+
+document.getElementById('randomJoke').addEventListener('click', function() {
+    get_all_resource()
+
+});
+
 document.getElementById('toggleButton1').addEventListener('click', function() {
     const photo = document.getElementById('photo1');
     
