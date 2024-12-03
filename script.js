@@ -1,6 +1,6 @@
 function get_all_resource() { // получаем данные
 
-    fetch('https://jsonplaceholder.typicode.com/photos')
+    fetch('https://jsonplaceholder.typicode.com/comments')
     .then(response => {
         if (response.ok) {
           return response.json();
@@ -9,7 +9,7 @@ function get_all_resource() { // получаем данные
         }
       })
       .then(data => {
-        alert(data.title);
+        alert("Имя:" + data.name +" Почта:"+ data.email +" Комментарий:"+ data.body);
       })
       .catch(error => {
         alert(error);
