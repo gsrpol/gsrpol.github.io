@@ -1,6 +1,6 @@
 function get_all_resource() { // получаем данные
 
-    fetch('https://official-joke-api.appspot.com/random_joke')
+    fetch('https://jsonplaceholder.typicode.com/photos')
     .then(response => {
         if (response.ok) {
           return response.json();
@@ -9,7 +9,7 @@ function get_all_resource() { // получаем данные
         }
       })
       .then(data => {
-        alert(data.setup +" "+ data.punchline);
+        alert(data.title);
       })
       .catch(error => {
         alert(error);
