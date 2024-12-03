@@ -1,25 +1,21 @@
 function get_all_resource() { // получаем данные
 
-    fetch('https://jsonplaceholder.typicode.com/comments')
-    .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Ошибка при вызове API');
-        }
-      })
-      .then(data => {
-        alert("Имя:" + data.name +" Почта:"+ data.email +" Комментарий:"+ data.body);
-      })
-      .catch(error => {
-        alert(error);
+  fetch('https://jsonplaceholder.typicode.com/comments')
+  .then(response => response.json())
+  .then(data => {
+      const tableBody = document.getElementById('commentsTable').getElementsByTagName('tbody')[0];
+      data.forEach(comment => {
+          const row = tableBody.insertRow();
+          row.insertCell(0).textContent = comment.id;
+          row.insertCell(1).textContent = comment.name;
+          row.insertCell(2).textContent = comment.email;
+          row.insertCell(3).textContent = comment.body;
       });
+  })
+  .catch(error => console.error('Ошибка:', error));
 }
 
-document.getElementById('randomJoke').addEventListener('click', function() {
-    get_all_resource()
-
-});
+get_all_resource();
 
 document.getElementById('toggleButton1').addEventListener('click', function() {
     const photo = document.getElementById('photo1');
